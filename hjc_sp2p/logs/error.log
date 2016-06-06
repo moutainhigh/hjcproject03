@@ -1,0 +1,166 @@
+2016-05-26 16:30:37,155 ERROR ~ 
+
+@707p5edld
+Error during job execution (jobs.Bootstrap)
+
+Oops: VerifyError
+An unexpected error occured caused by exception VerifyError: Inconsistent stackmap frames at branch target 141 Exception Details:   Location:     business/User.withdrawalFee(D)D @65: ifle   Reason:     Current frame's stack size doesn't match stackmap.   Current Frame:     bci: @65     flags: { }     locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }     stack: { double, double_2nd, integer }   Stackmap Frame:     bci: @141     flags: { }     locals: { double, double_2nd }     stack: { top, double, double_2nd }   Bytecode:     0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4     0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504     0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a     0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e     0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a     0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418     0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a     0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812     0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af     0000090:                                           Stackmap Table:     full_frame(@141,{Double},{Top,Double})     full_frame(@142,{Double},{Top,Double,Top}) 
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 36663
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.Invoker$Invocation.onException(Invoker.java:244)
+	at play.jobs.Job.onException(Job.java:124)
+	at play.jobs.Job.call(Job.java:163)
+	at Invocation.Job(Play!)
+Caused by: java.lang.VerifyError: Inconsistent stackmap frames at branch target 141
+Exception Details:
+  Location:
+    business/User.withdrawalFee(D)D @65: ifle
+  Reason:
+    Current frame's stack size doesn't match stackmap.
+  Current Frame:
+    bci: @65
+    flags: { }
+    locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }
+    stack: { double, double_2nd, integer }
+  Stackmap Frame:
+    bci: @141
+    flags: { }
+    locals: { double, double_2nd }
+    stack: { top, double, double_2nd }
+  Bytecode:
+    0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4
+    0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504
+    0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a
+    0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e
+    0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a
+    0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418
+    0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a
+    0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812
+    0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af
+    0000090:                                        
+  Stackmap Table:
+    full_frame(@141,{Double},{Top,Double})
+    full_frame(@142,{Double},{Top,Double,Top})
+
+	at business.BackstageSet.<clinit>(BackstageSet.java:182)
+	at jobs.Bootstrap.doJob(Bootstrap.java:33)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	... 1 more
+2016-05-26 16:30:37,327 ERROR ~ 
+
+@707p5edle
+Internal Server Error (500) for request GET /
+
+Oops: VerifyError
+An unexpected error occured caused by exception VerifyError: Inconsistent stackmap frames at branch target 141 Exception Details:   Location:     business/User.withdrawalFee(D)D @65: ifle   Reason:     Current frame's stack size doesn't match stackmap.   Current Frame:     bci: @65     flags: { }     locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }     stack: { double, double_2nd, integer }   Stackmap Frame:     bci: @141     flags: { }     locals: { double, double_2nd }     stack: { top, double, double_2nd }   Bytecode:     0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4     0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504     0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a     0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e     0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a     0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418     0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a     0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812     0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af     0000090:                                           Stackmap Table:     full_frame(@141,{Double},{Top,Double})     full_frame(@142,{Double},{Top,Double,Top}) 
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 36835
+play.exceptions.UnexpectedException: Unexpected Error
+	at play.jobs.JobsPlugin.afterApplicationStart(JobsPlugin.java:131)
+	at play.plugins.PluginCollection.afterApplicationStart(PluginCollection.java:531)
+	at play.Play.start(Play.java:554)
+	at play.Play.detectChanges(Play.java:637)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.VerifyError: Inconsistent stackmap frames at branch target 141
+Exception Details:
+  Location:
+    business/User.withdrawalFee(D)D @65: ifle
+  Reason:
+    Current frame's stack size doesn't match stackmap.
+  Current Frame:
+    bci: @65
+    flags: { }
+    locals: { double, double_2nd, 'business/BackstageSet', 'business/BackstageSet', double, double_2nd }
+    stack: { double, double_2nd, integer }
+  Stackmap Frame:
+    bci: @141
+    flags: { }
+    locals: { double, double_2nd }
+    stack: { top, double, double_2nd }
+  Bytecode:
+    0000000: b804 2b4d 2c4e 0336 042d 135a d313 5ad4
+    0000010: 135a d6b8 5ad8 c003 93b6 5ada 3604 1504
+    0000020: 8726 2c4e 0e39 042d 135a db13 5adc 135a
+    0000030: ddb8 5adf c003 99b6 5ae1 3904 1804 670e
+    0000040: 979e 004c 262c 4e0e 3904 2d13 5ae2 135a
+    0000050: e313 5ae5 b85a e7c0 0399 b65a e939 0418
+    0000060: 0467 2c4e 0e39 042d 135a ea13 5aeb 135a
+    0000070: ecb8 5aee c003 99b6 5af0 3904 1804 b812
+    0000080: b06b 1410 6c6f 05b8 084e a700 040e 63af
+    0000090:                                        
+  Stackmap Table:
+    full_frame(@141,{Double},{Top,Double})
+    full_frame(@142,{Double},{Top,Double,Top})
+
+	at business.BackstageSet.<clinit>(BackstageSet.java:182)
+	at jobs.Bootstrap.doJob(Bootstrap.java:33)
+	at play.jobs.Job.doJobWithResult(Job.java:50)
+	at play.jobs.Job.call(Job.java:146)
+	at Invocation.Job(Play!)
+2016-06-06 17:14:23,525 ERROR ~ Cannot connected to the database : Unknown database 'homebackup123'  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 20792
+com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'homebackup123'
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:951)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1717)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1276)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2395)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:133)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
+	at play.Play.start(Play.java:533)
+	at play.Play.detectChanges(Play.java:637)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+2016-06-06 17:14:25,076 ERROR ~ 
+
+@70b1b1i40
+Internal Server Error (500) for request GET /
+
+Database error
+A database error occured : Cannot connected to the database, Unknown database 'homebackup123'
+  ~ play.Logger.niceThrowable(Logger.java:570) ~ play ~ 22343
+play.exceptions.DatabaseException: Cannot connected to the database, Unknown database 'homebackup123'
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:185)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:525)
+	at play.Play.start(Play.java:533)
+	at play.Play.detectChanges(Play.java:637)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown database 'homebackup123'
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.Util.getInstance(Util.java:386)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4096)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:4028)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:951)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1717)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1276)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2395)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2428)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2213)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:797)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:411)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:389)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:305)
+	at java.sql.DriverManager.getConnection(DriverManager.java:571)
+	at java.sql.DriverManager.getConnection(DriverManager.java:215)
+	at play.db.DBPlugin.onApplicationStart(DBPlugin.java:133)
+	... 5 more
+2016-06-06 17:22:55,292 ERROR ~ The user specified as a definer ('root'@'%') does not exist  ~ org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) ~ org.hibernate.util.JDBCExceptionReporter ~ 74822
+2016-06-06 17:22:55,293 ERROR ~ org.hibernate.exception.GenericJDBCException: could not execute query  ~ play.Logger.error(Logger.java:399) ~ play ~ 74823
+2016-06-06 17:22:55,656 ERROR ~ The user specified as a definer ('root'@'%') does not exist  ~ org.hibernate.util.JDBCExceptionReporter.logExceptions(JDBCExceptionReporter.java:234) ~ org.hibernate.util.JDBCExceptionReporter ~ 75186
+2016-06-06 17:22:55,656 ERROR ~ org.hibernate.exception.GenericJDBCException: could not execute query  ~ play.Logger.error(Logger.java:399) ~ play ~ 75186
